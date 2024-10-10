@@ -1,0 +1,6 @@
+<!-- templates/usuario/user_home.html -->
+<h1>Página del Usuario</h1>
+<p>Nombre: {{ usuario.nombre }}</p>
+<p>Email: {{ usuario.email }}</p>
+<p>Login: {{ usuario.login }}</p>
+<a href="{% url 'actualizar_usuario' usuario.id %}">Actualizar Información</a>

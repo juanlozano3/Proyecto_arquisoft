@@ -5,8 +5,7 @@ class Usuario(models.Model):
     nombre = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     login = models.CharField(max_length=50, unique=True)
-    phone = models.CharField(max_length=20, blank=True, null=True)
-    password = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)  # O cambia 'password' a 'Password' si prefieres usar el nombre exacto de la imagen
 
     def __str__(self):
         return self.nombre
