@@ -12,6 +12,7 @@ def user_home(request):
     usuario = get_object_or_404(Usuario, id=1)  # Replace 1 with the appropriate ID or fetch dynamically
     return render(request, 'usuario/user_home.html', {'usuario': usuario})
 
+@csrf_exempt
 def actualizar_usuario(request, id):
     usuario = get_object_or_404(Usuario, id=id)
     if request.method == 'POST':
