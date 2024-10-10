@@ -5,9 +5,11 @@ from .models import Usuario
 from .logic.usuario_logic import actualizar_usuario_logic
 from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def homepage(request):
     return render(request, 'homepage.html')
 
+@csrf_exempt
 def user_home(request):
     usuario = get_object_or_404(Usuario, id=1)  # Replace 1 with the appropriate ID or fetch dynamically
     return render(request, 'usuario/user_home.html', {'usuario': usuario})
