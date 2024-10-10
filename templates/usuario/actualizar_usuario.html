@@ -1,11 +1,13 @@
-<!-- templates/usuario/home.html -->
 <form method="POST" action="{% url 'actualizar_usuario' usuario.id %}">
     {% csrf_token %}
     <label for="username">Nombre de usuario:</label>
-    <input type="text" name="username" value="{{ usuario.nombre }}"><br>
+    <input type="text" id="username" name="username" value="{{ usuario.nombre }}" required><br>
+
     <label for="email">Correo electrónico:</label>
-    <input type="email" name="email" value="{{ usuario.email }}"><br>
+    <input type="email" id="email" name="email" value="{{ usuario.email }}" required><br>
+
     <label for="phone">Teléfono:</label>
-    <input type="text" name="phone" value="{{ usuario.phone }}"><br>
+    <input type="text" id="phone" name="phone" value="{{ usuario.phone }}" required><br>
+
     <button type="submit">Actualizar Información</button>
 </form>
