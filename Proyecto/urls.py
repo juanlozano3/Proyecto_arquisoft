@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name='homepage'),  # Ruta para la página principal
     path('usuario/', views.user_home, name='user_home'),  # Ruta para la vista de usuario
+    path('usuario/actualizar/', views.actualizar_usuario, name='actualizar_usuario'),  # Nueva ruta para la vista 'actualizar_usuario'
+    path("health-check/", views.health_check),
 ]

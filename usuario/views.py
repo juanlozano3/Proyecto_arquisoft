@@ -19,3 +19,6 @@ def actualizar_usuario(request):
         return HttpResponse("La información del usuario ha sido actualizada correctamente.")
     else:
         return HttpResponse("Método no permitido.", status=405)
+
+def health_check(request):
+    return HttpResponse("OK")
