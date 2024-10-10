@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Usuario
 from .logic.usuario_logic import actualizar_usuario_logic
+from django.views.decorators.csrf import csrf_exempt
 
 def homepage(request):
     return render(request, 'homepage.html')
